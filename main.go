@@ -3,10 +3,12 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/Abdujabbor/minikube-go-microservice/handlers"
 )
 
 func main() {
-	log.Println(http.ListenAndServe(":8000", handlers.Router()))
+	port := os.Getenv("PORT")
+	log.Println(http.ListenAndServe(":"+port, handlers.Router()))
 }

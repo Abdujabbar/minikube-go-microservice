@@ -1,6 +1,7 @@
 FROM scratch
 
-COPY app /
+COPY go-k8s-microservice /
 
-EXPOSE 8000
-CMD ["/app"]
+ENV PORT 8000
+EXPOSE $PORT
+CMD ["/go-k8s-microservice"]
