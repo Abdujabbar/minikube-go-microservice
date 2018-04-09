@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestWelcome(t *testing.T) {
+func TestWelcomeHandler(t *testing.T) {
 	router := Router()
 	ts := httptest.NewServer(router)
 	client, err := ts.Client().Get(ts.URL + "/")

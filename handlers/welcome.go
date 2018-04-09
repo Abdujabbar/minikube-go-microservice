@@ -6,6 +6,6 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-func welcome(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+func welcomeHandler(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	w.Write([]byte("You are welcome"))
 }

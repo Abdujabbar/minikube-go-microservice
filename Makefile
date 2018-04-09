@@ -8,6 +8,7 @@ GOARCH?=amd64
 LDFLAGS?=-ldflags "-X ${PROJECT}/version.Release=${RELEASE} -X ${PROJECT}/version.Commit=${COMMIT} -X ${PROJECT}/version.BuildDate=${BUILD_DATE}"
 
 
+
 clean:
 	rm -f ${APP}
 
@@ -15,3 +16,7 @@ clean:
 
 build: clean
 	go build $(LDFLAGS) -o ${APP}
+
+
+test: 
+	go test -v ./...
