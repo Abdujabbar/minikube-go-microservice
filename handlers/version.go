@@ -20,6 +20,7 @@ func versionHandler(w http.ResponseWriter, r *http.Request, params httprouter.Pa
 	})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
 	}
 
 	w.Write(jsonValue)
